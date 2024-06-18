@@ -5,170 +5,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-PROBLEM SOLVING</title>
-<style>
-    pre {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin-left: 25%;
-    }
-</style>
+    <style>
+        pre {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 25%;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <pre>
-    <h4>1. Write a program to print even numbers in the given range (1, input num)
-    input: Enter a number: 10  //output: 2 4 6 8 10</h4>
-
-    // num = +prompt("Enter a number : ");
-    let numb = 10;
-    s = ""
-    for (i = 1; i <= numb; i++) {
-        if (i % 2 == 0) {
-            s = s + i + " ";
-        }
-    }
-    console.log(s);              //2 4 6 8 10
-
-    // let num = 5;
-    // let a = 0; let b = 1;
-    // let sum = 0;
-    // let count = 0;
-    // let fibSeries = [a, b];
-    // while (count < num - 2) {
-    //     let c = a + b;
-    //     fibSeries.push(c);
-    //     a = b;
-    //     b = c;
-    //     count++;
-    // }
-    // for (let i = 0; i < fibSeries.length; i++) {
-    //     if (fibSeries[i] % 2 !== 0) {
-    //         sum += fibSeries[i];
-    //     }
-    // }
-    // console.log(sum);
-
-    <h4>2. Write a program to print sum of odd numbers in the fibonacci series
-    input: Enter no of series : 5 (0 1 1 2 3)   //output: 5</h4>
-
-    let num = 20;
-    let a = 0;
-    let b = 1;
-    let sum = 0;
-    if (num == 0) {
-        console.log("INVALID INPUT");
-    }
-    else if (num == 1) {
-        console.log(a);
-    }
-    else {
-        let i = 1;
-        while (i <= num) {
-            if (a % 2 !== 0) {
-                sum = sum + a;
-            }
-            let c = a + b;
-            a = b;
-            b = c;
-            i++
-        }
-    }                                           //Sum of odd numbers in the fibonacci series: 7563
-    console.log("Sum of odd numbers in the fibonacci series: " + sum);
-
-    <h4>3. Write a program to print sum of odd numbers in the fibonacci series and number should be added only once
-    input: Enter no of series : 5   //output: 4</h4>
-
-    num = 20;
-    a = 0;
-    b = 1;
-    sum = 0;
-    if (num == 0) {
-        console.log("INVALID INPUT");
-    }
-    else if (num == 1) {
-        console.log(a);
-    }
-    else {
-        let i = 1;
-        while (i <= num) {
-            if (a % 2 !== 0) {
-                sum = sum + a;
-            }
-            let c = a + b;
-            a = b;
-            b = c;
-            i++
-        }
-    }                                           //Sum of odd numbers in the fibonacci series: 7562
-    console.log("Sum of odd numbers in the fibonacci series:(no duplicates) " + (sum - 1));
-
-    <h4>Method 2 - using methods</h4>
-    num = 20;
-    a = 0;
-    b = 1;
-    sum = [];
-    add = 0;
-    if (num == 0) {
-        console.log("INVALID INPUT");
-    }
-    else if (num == 1) {
-        console.log(a);
-    }
-    else {
-        let i = 1;
-        while (i <= num) {
-            if (a % 2 !== 0) {
-                if (!sum.includes(a)) {
-                    sum.push(a)
-                }
-            }
-            let c = a + b;
-            a = b;
-            b = c;
-            i++
-        }
-        for (i of sum) {
-            add = add + i;
-        }
-    }                                           //Sum of odd numbers in the fibonacci series: 7562
-    console.log("Sum of odd numbers in the fibonacci series(no duplicates) : " + add);
-
-    <h4>4. Write a program to print the below series base don input
-    Enter a number: -10   // output: -10 -9 -8 - 7 -6 - 5 - 4 -3 -2 -1</h4>
-
-    number = -10;
-    s = "";
-    for (i = number; i <= -1; i++) {
-        s = s + i + " ";
-    }
-    console.log(s);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
-
-    // Enter a number: -10 (should not use <= operator)
-    number = -10;
-    s = "";
-    for (i = number; !(i >= 0); i++) {
-        s = s + i + " ";
-    }
-    console.log(s);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
-
-    <h4>5. Write a program to print the below series base don input
-    Enter a number: -10   //output: -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 </h4>
-    number = -10;
-    s = "";
-    for (i = -1; i >= number; i--) {
-        s = s + i + " ";
-    }
-    console.log(s);                              //-1 -2 -3 -4 -5 -6 -7 -8 -9 -10
-
-    // Enter a number: -10 (should not use <= operator)
-    number = -10;
-    s = "";
-    for (i = -1; !(i <= number - 1); i--) {
-        s = s + i + " ";
-    }
-    console.log(s);                              //-1 -2 -3 -4 -5 -6 -7 -8 -9 -10
-</pre>
     <script src="./task.js">
     </script>
+        <pre>
+            <h4>1. Write a program to print even numbers in the given range (1, input num)
+            input: Enter a number: 10  //output: 2 4 6 8 10</h4>
+            num = +prompt("Enter a number : ");
+            // let num = 10;
+            s = ""
+            for (i = 1; i <= num; i++) {
+                if (i % 2 == 0) {
+                    s = s + i + " ";
+                }
+            }
+            document.write(`Even numbers from 1 to given input ( ${num} ) is : ${s}<br><br>`)
+            console.log(`Even numbers from 1 to given input ( ${num} ) is : ${s}`);              //2 4 6 8 10
+        
+            <h4>2. Write a program to print sum of odd numbers in the fibonacci series
+            input: Enter no of series : 5 (0 1 1 2 3)   //output: 5</h4>
+            num = +prompt("Enter a number :")
+            // let num = 5;
+            let a = 0;
+            let b = 1;
+            let sum = 0;
+            if (num == 0) {
+                console.log("INVALID INPUT");
+            }
+            else if (num == 1) {
+                console.log(a);
+            }
+            else {
+                let i = 1;
+                while (i <= num) {
+                    if (a % 2 !== 0) {
+                        sum = sum + a;
+                    }
+                    let c = a + b;
+                    a = b;
+                    b = c;
+                    i++
+                }
+            }                                           //Sum of odd numbers in the fibonacci series: 5
+            document.write(`Sum of odd numbers in the fibonacci series ( ${num} ) is :  ${sum}<br><br>`);
+            console.log(`Sum of odd numbers in the fibonacci series ( ${num} ):  ${sum}`);
+        
+            <h4>3. Write a program to print sum of odd numbers in the fibonacci series and number should be added only once
+            input: Enter no of series : 5   //output: 4</h4>
+            num = +prompt("Enter no. of series :")
+            // num = 5;
+            a = 0;
+            b = 1;
+            sum = 0;
+            if (num == 0) {
+                console.log("INVALID INPUT");
+            }
+            else if (num == 1) {
+                console.log(a);
+            }
+            else {
+                let i = 1;
+                while (i <= num) {
+                    if (a % 2 !== 0) {
+                        sum = sum + a;
+                    }
+                    let c = a + b;
+                    a = b;
+                    b = c;
+                    i++
+                }
+            }                                           //Sum of odd numbers in the fibonacci series: 4
+            document.write(`Sum of odd numbers in the fibonacci series (without duplicates) ( ${num} ) is :  ${sum - 1}<br><br>`);
+            console.log("Sum of odd numbers in the fibonacci series:(without duplicates) " + (sum - 1));
+        
+            <h4>Method 2 - using methods</h4>
+            num = +prompt("Enter no. of series :")
+            // num = 5;
+            a = 0;
+            b = 1;
+            sum = [];
+            add = 0;
+            if (num == 0) {
+                console.log("INVALID INPUT");
+            }
+            else if (num == 1) {
+                console.log(a);
+            }
+            else {
+                let i = 1;
+                while (i <= num) {
+                    if (a % 2 !== 0) {
+                        if (!sum.includes(a)) {
+                            sum.push(a)
+                        }
+                    }
+                    let c = a + b;
+                    a = b;
+                    b = c;
+                    i++
+                }
+                for (i of sum) {
+                    add = add + i;
+                }
+            }                                           //Sum of odd numbers in the fibonacci series: 4
+            document.write(`Sum of odd numbers in the fibonacci series (without duplicates) ( ${num} ) is :  ${add}<br><br>`);
+            console.log("Sum of odd numbers in the fibonacci series(without duplicates) : " + add);
+            <h4>4. Write a program to print the below series base don input
+            Enter a number: -10   // output: -10 -9 -8 - 7 -6 - 5 - 4 -3 -2 -1</h4>
+            number = +prompt("Enter a number(negative value) :")
+            // number = -10;
+            s = "";
+            for (i = number; i <= -1; i++) {
+                s = s + i + " ";
+            }
+            console.log(s);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
+            document.write(`( ${number} ) is : ${s}<br><br>`)
+        
+            number = +prompt("Enter a number(negative value) :")
+            // number = -10;
+            s = "";
+            for (i = number; !(i >= 0); i++) {
+                s = s + i + " ";
+            }
+            document.write(`( ${number} ) is : ${s}<br><br>`)
+            console.log(s);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
+            <h4>5. Write a program to print the below series base don input
+                // Enter a number: -10   //output: -1 -2 -3 -4 -5 -6 -7 -8 -9 -10</h4>
+            number = +prompt("Enter a number(negative value) :")
+            // number = -10;
+            s = "";
+            for (i = -1; i >= number; i--) {
+                s = s + i + " ";
+            }
+            document.write(`( ${number} ) is : ${s}<br><br>`)
+            console.log(s);                              //-1 -2 -3 -4 -5 -6 -7 -8 -9 -10
+            // Enter a number: -10 (should not use <= operator)
+            number = +prompt("Enter a number(negative value) :")
+            // number = -10;
+            s = "";
+            for (i = -1; !(i <= number - 1); i--) {
+                s = s + i + " ";
+            }
+            document.write(`( ${number} ) is : ${s}<br><br>`)
+            console.log(s);                              //-1 -2 -3 -4 -5 -6 -7 -8 -9 -10
+        </pre>
 </body>
 
 </html>
