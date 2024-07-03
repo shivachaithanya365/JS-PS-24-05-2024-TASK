@@ -110,15 +110,15 @@ console.log(`Sum of odd numbers in the fibonacci series:(without duplicates) ( $
 // Enter a number: -10   // output: -10 -9 -8 - 7 -6 - 5 - 4 -3 -2 -1
 number = +prompt("Enter a number(negative value) :")
 // number = -10;
-if (number<0){
-s = "";
-for (i = number; i <= -1; i++) {
-    s = s + i + " ";
+if (number < 0) {
+    s = "";
+    for (i = number; i <= -1; i++) {
+        s = s + i + " ";
+    }
+    console.log(`( ${number} ) is : ${s}`);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
+    document.write(`<h2>( ${number} ) is : ${s}<br><br></h2>`);
 }
-console.log(`( ${number} ) is : ${s}`);                              //-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
-document.write(`<h2>( ${number} ) is : ${s}<br><br></h2>`);
-}
-else{
+else {
     document.write(`<h2>please enter a negative value</h2><br>`);
     console.log(`please enter a negative value`);
 }
